@@ -1,0 +1,29 @@
+Source: halium-metapackages
+Maintainer: JBBgameich <jbb.mail@gmx.de>
+Section: metapackages
+Priority: optional
+Build-Depends: debhelper (>= 10)
+Standards-Version: 4.0.0
+Vcs-Browser: https://github.com/JBBgameich/halium-metapackage
+Vcs-Git: https://github.com/JBBgameich/halium-metapackage.git
+
+Package: halium-default
+Architecture: all
+Depends: hybris-usb,
+         libhybris-dev,
+         libhybris-test,
+         libhybrs,
+         liblxc1 | lxc1,
+         lxc-android,
+         network-manager,
+         ofono,   
+         ${misc:Depends}
+Description: Packages needed for a working, Halium compatible installation
+
+Package: halium-dev
+Architecture: all
+Depends: gdb,
+         libc6-dbg,
+         ofono-scripts,
+         ${misc:Depends}
+Description: Packages needed for debugging Halium
